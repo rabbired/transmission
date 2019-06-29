@@ -14,3 +14,5 @@ RUN apk update && \
 	pip3 install autoremove-torrents && \
 	pip3 install flexget && \
 	rm -rf /var/cache/apk/*
+
+COPY 99-custom-files /etc/cont-init.d/99-custom-files
