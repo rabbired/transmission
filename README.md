@@ -1,4 +1,4 @@
-# for linuxserver/transmission
+# from linuxserver/transmission
 ###
 # Transmission + autoremove-torrents + FlexGet
 
@@ -14,19 +14,16 @@ docker create \
   -v path to data:/config \
   -v path to downloads:/downloads \
   -v path to watch folder:/watch \
+  -v path to config.yml folder:/root/.flexget \
   --restart unless-stopped \
   rabbired/transmission
-
-  flexget daemon start --daemonize
 
 # jerrymakesjelly/autoremove-torrents
 https://github.com/jerrymakesjelly/autoremove-torrents
 
 docker exec "name" autoremove-torrents --confg="" --log=""
 
-# FlexGet set and run
-
-# make /path/to/appdata/config/flexget/config.yml
+# FlexGet set
 
 # set webui passwd
 
