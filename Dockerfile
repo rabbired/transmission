@@ -10,6 +10,7 @@ RUN \
   pip3 --no-cache-dir install -U pip && \
   if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
   if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
+  if [[ ! -e /usr/local/bin/flexget ]]; then ln -sf `which flexget` /usr/local/bin/flexget; fi && \
   pip3 install autoremove-torrents && \
   pip3 install flexget && \
   apk del --purge python3-dev gcc libxml2-dev libxslt-dev \
