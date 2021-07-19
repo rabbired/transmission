@@ -20,7 +20,7 @@ RUN \
 
 # ***add autoremove-torrents ***
 RUN pip3 --no-cache-dir install \
-#  flexget \
+  flexget \
   autoremove-torrents \
   subfinder && \
   if [[ ! -e /usr/local/bin/flexget ]]; then ln -sf `which flexget` /usr/local/bin/flexget; fi && \
